@@ -5,6 +5,9 @@ Linux server setup for hosting Python webapp.
 ## General info
 
 _IP adress_: 34.201.252.43
+
+_URL_: http://34.201.252.43/
+
 _SSH port_: 2200
 
 
@@ -79,11 +82,12 @@ $ sudo service ssh restart
 
 Also, opening that port was needed on Lightsail, in nextwork tab.
 
-### 6. Disable ssh login for root user
+### 6. Disable ssh login for root user and avoid password authentication
 
 Inside /etc/ssh/sshd_config:
 ```
 PermitRootLogin no
+PasswordAuthentication no
 ```
 Then restart the service:
 ```sh
@@ -262,3 +266,9 @@ Restart apache server and check if everything works!
 ```sh
 $ sudo service apache2 restart
 ```
+
+Resources used to acomplish the project:
+* Ubuntuforums
+* Udacity forums
+* Askubuntu
+* Digital Ocean's community tutorials
